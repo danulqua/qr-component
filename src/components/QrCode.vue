@@ -8,11 +8,26 @@
     <div
       class="fz-[15px] mt-4 text-center text-lg font-semibold text-dark-blue"
     >
-      Improve your front-end skills by building projects
+      {{ title }}
     </div>
     <p class="mt-4 px-2 pb-4 text-center text-sm text-grayish-blue">
-      Scan the QR code to visit Frontend Mentor and take your coding skills to
-      the next level
+      {{ subtitle }}
     </p>
   </div>
 </template>
+
+<script>
+export default {
+  name: "QrCode",
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+    subtitle: {
+      type: String,
+      required: true,
+    },
+  },
+};
+</script>
